@@ -18,8 +18,8 @@
   	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
   	<link rel="stylesheet" type="text/css" href="css/general.css">
-  	<title>IIT Indore Alumni Login</title>
-  	
+  	<title>SIMFOALUMNI.com</title>
+  	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>

@@ -11,7 +11,7 @@
 			<script src="./assets/js/vendor/html5shiv.js"></script>
 			<script src="./assets/js/vendor/respond.min.js"></script>
 		<![endif]-->
-		<link rel="shortcut icon" href="image/favicon.ico">
+		<link rel="shortcut icon" href="favicon.ico">
 		<style type="text/css">
 			body {
 				padding-top: 70px;

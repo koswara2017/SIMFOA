@@ -8,7 +8,7 @@
   	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
   	<link href="css/carousel.css" rel="stylesheet">
   	<title>SIMFOAALUMNI.com</title>
-  	
+  	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>

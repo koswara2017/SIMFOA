@@ -15,7 +15,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
   <title>Welcome Alumni</title>
-
+<link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>
