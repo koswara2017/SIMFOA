@@ -1,7 +1,27 @@
+<?php
+        //Start session
+        session_start();        
+
+        if(isset($_SESSION['SESS_USERNAME']) && (trim($_SESSION['SESS_USERNAME']) != '')) 
+        {
+                header("location: home.php");
+                exit();
+        }
+?>
+
+<!DOCTYPE html>
+
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/general.css">
-  <script type="text/javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+  	<link rel="stylesheet" type="text/css" href="css/general.css">
+  	<title>SIMFOALUMNI.com</title>
+  	<link rel="shortcut icon" href="favicon.ico">
+	
+	<script type="text/javascript">
 
   function validateForm()
   {
@@ -26,18 +46,19 @@
   
   }
   </script>
-
-  <title>Add Alumni</title>
 </head>
 
 <body>
+
+<?php require_once('navbar_main.php');?>
+
+<div class="container">
   <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post"
   id="reg">
-    <table width="274" border="0" align="center" cellpadding="5" cellspacing="5">
-      <tr>
-        <td colspan="2">
-          <div align="center">
-            <?php 
+        <div class="col-lg-4 col-lg-offset-4">
+        <div class="row">
+        <div align="center"><h2 class="form-signin-heading">Registrasi Akun</h2></div> <br>
+				<?php 
                             if(count($_GET)==1)
                             {  
                               echo 'Registration Success';
@@ -47,33 +68,28 @@
                               echo 'Add Alumni Here';
                             }
                             ?>
+
+        <input name="username" type="text" class="form-control" placeholder="Username" required autofocus>
+        <input name="password" type="password" class="form-control" placeholder="Password" required>
+        <br>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
           </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td width="95">
-          <div align="right">
-            Username:
-          </div>
-        </td>
-
-        <td width="171"><input type="text" name="username"></td>
-      </tr>
-
-      <tr>
-        <td>
-          <div align="right">
-            Password:
-          </div>
-        </td>
-
-        <td><input type="text" name="password"></td>
-      </tr>
-
-        <td><input name="submit" type="submit" value="Submit"></td>
-      </tr>
-    </table>
+        </div>
+        <br>
+       
+        <br>
+        
+        </div>
   </form>
+</div>
+<!--INCLUDE SCRIPTS NECESSARY FOR BOOTSTRAP COMPONENTS-->
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php
+
+?>

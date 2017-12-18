@@ -23,6 +23,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--LINK CSS FILES-->
+		<link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/general.css"> 
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
              <title>

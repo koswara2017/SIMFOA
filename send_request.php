@@ -15,7 +15,7 @@ $accom='request for accomodation';
   <!--LINK CSS FILES-->
   <link rel="stylesheet" type="text/css" href="css/general.css"> 
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
+<link rel="shortcut icon" href="favicon.ico">
   <title>Request to Institute</title>
 <script src="js/admin_js/jquery-1.7.2.min.js"></script>
 <script src="js/admin_js/jquery.validate.min.js"></script>

@@ -23,7 +23,7 @@
   	<!--LINK CSS FILES-->
   	<link rel="stylesheet" type="text/css" href="css/general.css"> 
   	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
+<link rel="shortcut icon" href="favicon.ico">
   	<title>Search Alumni Database</title>
 
   	<script type="text/javascript">
