@@ -1,7 +1,7 @@
 
 <html>
 	<head>
-		<title>ALUMNI NETWORKING</title>
+		<title>SIOMFOALUMNI.com</title>
 		<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>
 		<script type="text/javascript" src="./assets/js/flat-ui.min.js"></script>
 		<link rel="stylesheet" href="./assets/css/vendor/bootstrap/css/bootstrap.min.css">
@@ -11,7 +11,7 @@
 			<script src="./assets/js/vendor/html5shiv.js"></script>
 			<script src="./assets/js/vendor/respond.min.js"></script>
 		<![endif]-->
-		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<link rel="shortcut icon" href="image/favicon.ico">
 		<style type="text/css">
 			body {
 				padding-top: 70px;
@@ -46,10 +46,10 @@ echo '<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">';
     else
         echo '<li><a href="blog.php"><span class="glyphicon glyphicon-star"></span> Blog</a></li>';
 
-	if ($filepath=='/gallery.php') 
+	/* if ($filepath=='/gallery.php') 
     	echo '<li class="active"><a href="#"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>';
     else
-		echo '<li><a href="gallery.php"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>';
+		echo '<li><a href="gallery.php"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>'; */
 
     echo '</ul>';
 echo '</nav>';
