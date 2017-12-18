@@ -60,8 +60,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
 
 <div class="containter">
 
-<div class="col-md-12" style="
-    top: 75px;">
+<div class="col-md-12" style="margin-top: 75px;">
 
   <div class="panel panel-info">
   <div class="panel-heading" align="center">

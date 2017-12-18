@@ -44,7 +44,7 @@
       <?php require_once('navbar.php'); ?>
       <!--NAVIGATION BAR END-->
             <div class="container">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-12" style="margin-top: 75px;">
             <div class="panel panel-info">
 
               <div class="panel-heading">

@@ -28,7 +28,7 @@ $result=mysqli_query($con,$qry);
 <?php require_once('navbar.php');?>   
 
 <div class="container">
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-16" style="margin-top: 75px;">
 
 <!--PENDING REQUESTS-->
 <div class="row">

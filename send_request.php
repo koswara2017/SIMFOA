@@ -64,19 +64,19 @@ $(document).ready(function() {
 <body>
 <?php require('navbar.php'); ?>
 <div class="container">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-12" style="margin-top: 75px;">
   <div class="well">
   <h1>Send request to Institute</h1>
     <form action="send_request_exec.php" method="POST" name="pwdreset" id="pwdreset">
-      <div>
+      <p>
         <label for="email" >E-mail From</label>
         <input name="email" type="text" id="email" autofocus required>
-      </div>
-      <div>
+      </p>
+      <p>
         <label for="email" >E-mail to</label>
         <input name="emailto" type="text" id="emailto" value='palaniia@iiti.ac.in'>
-      </div>
-                                                           <div>
+      </p>
+      <p>
         <label for="reason" >Reason </label>
         <select name="reason" id="programme" value="reason" class="required" title="Please choose a reason.">
           <option value="one">--Please select one--</option>
@@ -84,15 +84,15 @@ $(document).ready(function() {
           <option value="doc">request for documents</option>
           <option value="non">none of the above</option>
         </select>
-      </div>
-      <div>
+      </p>
+      <p>
         <label for="sub" >Subject</label>
         <input type="text" name="sub" title="Write your request" placeholder="Subject here">
-      </div>
-      <div>
+      </p>
+      <p>
         <label for="msg" >Body</label><br>
         <textarea name="msg" rows="10" cols="50" title="Write your request" placeholder="body"></textarea>
-      </div>
+      </p>
       
       
     

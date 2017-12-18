@@ -27,8 +27,8 @@ include "admin_connection.php";
 include "navbar_main.php";
 
 
-$sql  = " SELECT `pf_id`, `pf_name`,`pf_title`,`pf_ppost`, `pf_username`, DATE_FORMAT(`pf_date`, '%M %D, %Y at %H:%i') as `pf_date` FROM `pforum` "; 
-$sql .= " WHERE `pf_status`=1 ORDER BY `pf_id` DESC"; 
+$sql  = " SELECT pf_id, pf_name,pf_title,pf_ppost, pf_username, DATE_FORMAT(pf_date, '%M %D, %Y at %H:%i') as pf_date FROM pforum "; 
+$sql .= " WHERE pf_status=1 ORDER BY pf_id DESC"; 
 $qry  = mysqli_query($con, $sql) or die("SQL Error: $sql<br>" . mysqli_error($con)); 
 
 
