@@ -66,39 +66,75 @@ $(document).ready(function() {
 <div class="container">
   <div class="col-md-12" style="margin-top: 75px;">
   <div class="well">
-  <h1>Send request to Institute</h1>
     <form action="send_request_exec.php" method="POST" name="pwdreset" id="pwdreset">
-      <p>
-        <label for="email" >E-mail From</label>
-        <input name="email" type="text" id="email" autofocus required>
-      </p>
-      <p>
-        <label for="email" >E-mail to</label>
-        <input name="emailto" type="text" id="emailto" value='palaniia@iiti.ac.in'>
-      </p>
-      <p>
-        <label for="reason" >Reason </label>
-        <select name="reason" id="programme" value="reason" class="required" title="Please choose a reason.">
-          <option value="one">--Please select one--</option>
-          <option value="acc">request for accomodation</option>
-          <option value="doc">request for documents</option>
-          <option value="non">none of the above</option>
-        </select>
-      </p>
-      <p>
-        <label for="sub" >Subject</label>
-        <input type="text" name="sub" title="Write your request" placeholder="Subject here">
-      </p>
-      <p>
-        <label for="msg" >Body</label><br>
-        <textarea name="msg" rows="10" cols="50" title="Write your request" placeholder="body"></textarea>
-      </p>
-      
-      
-    
-      <div>
-        <input type="submit" name="submit" id="submit" value="Submit">
-      </div>
+    <div class="panel-heading">
+            <h3>Send request to Institute</h3>
+    </div>
+		<table class="table table-striped" align="center">
+			<tr>
+				<td>
+					<div for="name">E-mail From :</div>
+				</td>
+				<td>
+				  <input name="email" type="text" id="email" autofocus required>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div>
+						E-mail to :
+					</div>
+				</td>
+				<td>
+				<label>
+				<input name="emailto" type="text" id="emailto" value='palaniia@iiti.ac.in'></label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				  <div>
+					Reason 
+				  </div>
+				</td>
+				<td>
+				<select name="reason" id="programme" value="reason" class="required" title="Please choose a reason.">
+				  <option value="one">--Please select one--</option>
+				  <option value="acc">request for accomodation</option>
+				  <option value="doc">request for documents</option>
+				  <option value="non">none of the above</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				  <div>
+					Subject
+				  </div>
+				</td>
+				<td>
+					<input type="text" name="sub" title="Write your request" placeholder="Subject here">
+				</td>
+			</tr>
+			<tr>
+				<td>
+				  <div>
+					Body
+				  </div>
+				</td>
+				<td>
+					<textarea name="msg" rows="10" cols="50" title="Write your request" placeholder="body"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div align="center">
+						<input type="submit" name="submit" id="submit" value="Submit">
+					</div>
+				</td>
+			</tr>
+
+        </table>
     </form>
     </div>
   </div>
