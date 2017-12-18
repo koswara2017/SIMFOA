@@ -43,7 +43,7 @@
 
   	<form action="<?php  echo $_SERVER['PHP_SELF'] ?>" method="GET" class="form-inline">
   		<div class="row">
-  		<div class="container col-md-8 col-md-offset-2 well" align="left">
+  		<div class="container col-md-12 well" style="margin-top: 75px;" align="left">
   			<div class="col-md-3"><input type="text" class="form-control" name="param_name" placeholder="Name" value="<?php echo $param_name ?>"/></div>
     		<div class="col-md-3"><input type="text" class="form-control" name="param_batch" placeholder="Batch" value="<?php  echo $param_batch ?>"/></div>
       		<div class="col-md-3"><input type="text" class="form-control" name="param_roll" placeholder="Roll Num" value="<?php  echo $param_roll ?>"/></div>
@@ -54,7 +54,7 @@
       	</div>
 
   	<div class="row">
-  	<div class="col-md-8 col-md-offset-2 panel">
+  	<div class="col-md-12 panel">
   	<div class="panel-header">
   		<h3><span class="glyphicon glyphicon-search"></span> Search Results</h3>
   	</div>
