@@ -1,0 +1,11 @@
+Time : 20:02:43
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aluni_v2.alumni' doesn't exist
+Raw SQL : SELECT * FROM alumni WHERE nama_lengkap LIKE '%koswara%'
+
+Time : 20:00:34
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aluni_v2.alumni' doesn't exist
+Raw SQL : SELECT * FROM alumni WHERE nama_lengkap LIKE '%koswara%'
+
+Time : 19:59:20
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aluni_v2.alumni' doesn't exist
+Raw SQL : SELECT * FROM alumni WHERE nama_lengkap LIKE '%koswara%'

@@ -7,7 +7,7 @@
   	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
   	<link href="css/carousel.css" rel="stylesheet">
-  	<title>IIT Indore Alumni</title>
+  	<title>SIMFOAALUMNI.com</title>
   	
 </head>
 
@@ -15,8 +15,8 @@
 		<?php require_once('navbar_main.php');?>
 
 
- <div id="myCarousel" class=" container carousel slide" data-ride="carousel">
-      <!-- Indicators -->
+ <!--div id="myCarousel" class=" container carousel slide" data-ride="carousel">
+      <!-- Indicators >
 
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -53,11 +53,9 @@
     			<p>You may login and browse through the alumni database. Don't forget to check out the Blog section for articles by fellow alumni.</p>
           <h2>News</h2>
           <p>No new news.</p>
-          <h2>Other pages</h2>
+          <h2>.......................</h2>
           <p>
-            <a href="http://iiti.ac.in"> IIT Indore Website</a><br>
-            <a href="http://iiti.ac.in"> Student Gymkhana</a><br>
-            <a href="http://iiti.ac.in"> IITI Hostel</a>
+           
           </p>
     		</div>
     	</div>
