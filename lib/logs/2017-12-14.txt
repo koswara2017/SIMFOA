@@ -1,0 +1,26 @@
+Time : 17:19:53
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_anggota' in 'where clause'
+Raw SQL : DELETE FROM aluni_pengguna_hak_akses WHERE id_anggota = '9'
+
+Time : 17:14:18
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'
+Raw SQL : DELETE FROM aluni_anggota_akademik WHERE username = '9'
+
+Time : 17:13:18
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'
+Raw SQL : DELETE FROM aluni_anggota_akademik WHERE username = ''
+
+Time : 16:46:21
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'
+Raw SQL : INSERT INTO aluni_pengguna VALUES ('', '46a381f7b2b9d9c8a03835280d2d96ff4de6abfe91bfc21a3c242957a813ce4708afab21f754cc230bf0606b5985b550b154876192c1c94744e3b361024197ae', '1b20262e86b62309d0d8fbb7640a3a52a2c6fd634449fef2531f0db1db05bd1f', 'user', 'ya', 'kos', '', '.jpg', '10', 'Web-SignUP', NOW(), 'Web-SignUP', NOW(), '0')
+
+Time : 16:37:39
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'amelian' for key 'PRIMARY'
+Raw SQL : INSERT INTO aluni_pengguna VALUES ('amelian', 'fb853839b30b094240e4ccef25bf4d26b3cc5964cc22cb4d515063d05453ce27394c2c003e1104c08e928a28860218ba8e67a887a04ad05382cc62308b3b3db1', '31fdc3a034f7c09a394aeb628ea4d19502039e195af3b413f80b93eb5cf6ecdd', 'user', 'ya', 'Amelia Nursyamsiah', '', 'no-img.jpg', '6', 'Web-SignUP', NOW(), 'Web-SignUP', NOW(), '0')
+
+Time : 16:21:18
+SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Raw SQL : INSERT INTO aluni_anggota_dasar VALUES ('', 'koswara', 'koswara90', 'laki-laki', 'Kabupaten Subang', '1993/10/03', '1', 'koswara90.jpg', '12', '173', '<p>Salam Kenal &clubs;</p>', '', NOW(), '', NOW(), '0')
+
+Time : 07:56:43
+SQLSTATE[HY000] [1049] Unknown database 'aluni_v2'
