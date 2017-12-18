@@ -41,6 +41,7 @@
                             if(count($_GET)==1)
                             {  
                               echo 'Registration Success';
+							  header("location: alumni_login.php");
                             }
                             else
                             {
