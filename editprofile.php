@@ -36,7 +36,8 @@
     <div class="container">
 
 
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-12" style="
+    top: 75px;">
 
 
       <div class="row">
