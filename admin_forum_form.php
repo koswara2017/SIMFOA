@@ -1,11 +1,32 @@
+<!DOCTYPE html>
 
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Public Post</title>
-<link href="css/forum_form.css" rel="stylesheet" type="text/css" />
+  <head>
+    <title>admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery UI -->
+    <link href="css/jquery-ui.css" rel="stylesheet" media="screen">
 
-<style type="text/css">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <link href="vendors/select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+	
+    <link href="css/forms.css" rel="stylesheet">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	
+	<style type="text/css">
 #subForm {
 	font-size: .8em;
 }
@@ -45,37 +66,151 @@
 }
 
 </style>
-</head>
-<body id="feature" class="col2">
-<div id="wrapper">
-  <div id="banner">
-    <div id="background"><p class="logo">IITI Alumni Forum : Public</p>
-      <div id="nav">
-        <ul>
-          <li><a href="admin_forum_guide.php" id="guide">How this Works</a></li>
-	<br class="clear"  />
-      </div>
-      <!-- end nav -->
-    </div>
-    <!-- end background -->
-  </div>
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">Halaman Admin</a></h1>
+	              </div>
+	           </div>
+	           <div class="col-md-5">
+	              <div class="row">
+	                <div class="col-lg-12">
+	                  <!--div class="input-group form">
+	                       <input type="text" class="form-control" placeholder="Search...">
+	                       <!--span class="input-group-btn">
+	                         <button class="btn btn-primary" type="button">Search</button>
+	                       </span-->
+	                  </div-->
+	                </div>
+	              </div>
+	           </div>
+	           <div class="col-md-2">
+	              <div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+	                        <ul class="dropdown-menu animated fadeInUp">
+	                          
+	                          <li><a href="admin_logout.php">Logout</a></li>
+	                        </ul>
+	                      </li>
+	                    </ul>
+	                  </nav>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                  
+                    <li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Quick Fungtions
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_approve_pwd_request.php">Reset Password Request</a></li>
+                            <li><a href="admin_forum_form.php">Create a Blog</a></li>
+							<li><a href="admin_approve_forum_post.php">Pending Blog Post</a></li>
+							<li><a href="admin_send_mail.php">Compos Mail</a></li>
+							
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Approve Blog
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_forum_form.php">Write Blog Posts</a></li>
+                            <li><a href="admin_approve_forum_post.php">Approve Blog Posts</a></li>
+							<li><a href="blog.php">View Blog</a></li>
+                        </ul>
+                    </li>
+					
+					<li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Approve Account
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_approve_pwd_request.php">Password reset request</a></li>
+                        </ul>
+                    </li>
+					
+					<li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Alumni Related
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_send_mail.php">Send mail</a></li>
+							 <li><a href="admin_search.php">Search Alumni</a></li>
+                        </ul>
+                    </li>
+					<li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Create Event
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_allevents">View All Event</a></li>
+							 <li><a href="term.php">admin_events.php</a></li>
+                        </ul>
+                    </li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+	  			<div class="row">
+	  				<div class="col-md-12 panel-info">
+			  			<div class="content-box-header panel-heading">
+		  					<div class="panel-title ">Beranda</div>
+							
+							
+			  			</div>
+			  			<div class="content-box-large box-with-header">
+				  			
+							<!--ahir menu-->
+							
+							
+			<!--awal isi-->	
+
   <!-- end banner -->
   <div id="main">
     <h1 id="lead"><span class="section">Create Post In</span> Public Forum </h1>
     <form action="admin_public_forum_action.php" id="subForm" name="subForm" method="post" >
-    <p><label for="name" class="label">What is your name?</label>
+    <p><label for="name" class="label"><font size=3 color="black">Nama</font></label>
       <input type="text" name="name" id="name" /></p>
-<p><label for="roll" class="label">What is your username ( will not appear in post )?</label>
+<p><label for="roll" class="label"><font size=3 color="black">Nama Panggilan</font></label>
       <input type="text" name="roll" id="roll" /></p>
-	  <p><label for="prof" class="label">What is Your Current Profession?</label>
+	  <p><label for="prof" class="label"><font size=3 color="black">Pekerjaan</font></label>
       <input type="text" name="prof" id="prof" /></p>
 
- <p><label for="title" class="label">What is the Post Title ?</label>
+ <p><label for="title" class="label"><font size=3 color="black">Judul Postingan</font></label>
       <input type="text" name="title" id="title" /></p>
 
 
 	  <p>
-	    <span class="label">Who is this Post Aimed at ?</span>
+	    <span class="label"><font size=3 color="black">Dapat dilihat Oleh</font></span>
 	    <label>
 	    <input name="aud" type="radio" value="1" />Anybody</label>
 	    <label>
@@ -84,7 +219,7 @@
 	    <input name="aud" type="radio" value="3" />For Students</label>
 	  </p>
 	  <p>
-	    <label for="refer" class="label">What is this Post About ?</label>
+	    <label for="refer" class="label"><font size=3 color="black">Tema Postingan</font></label>
 	    <select name="refer" id="refer">
 	      <option value="null">Select One</option>
 	      <option value="1">Academics</option>
@@ -94,7 +229,7 @@
         </select>
 	  </p>
 	  <p>
-	    <label for="ppost" class="label"> The Main Post </label>
+	    <label for="ppost" class="label"><font size=3 color="black">Isi Postingan </font></label>
         <textarea name="ppost" cols="35" rows="4" id="ppost"></textarea>
 	  </p>
 	  <p>
@@ -104,6 +239,98 @@
 	<br class="clear" />
   </div>
 </div>
-<!-- end wrapper -->
-</body>
+			<!--akhir isi-->	
+			
+							
+							
+							
+							
+							
+						</div>
+			  		</div>
+	  		
+				</div>
+
+
+	  			<div class="row">
+	  				<div class="col-md-6 panel-default">
+			  			
+			  		</div>
+
+	  				<div class="col-md-6 panel-default">
+			  			
+			  		</div>
+	  			</div>
+
+
+	  			<div class="row">
+					<div class="col-md-6">
+						
+					</div>
+
+					<div class="col-md-6">
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						
+				
+					
+					
+					</div>
+				</div>
+
+
+	  		<!--  Page content -->
+		  </div>
+		</div>
+    </div>
+
+    <footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2017 || Depelovment</a>
+            </div>
+            
+         </div>
+      </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
+
+    <script src="vendors/select/bootstrap-select.min.js"></script>
+
+    <script src="vendors/tags/js/bootstrap-tags.min.js"></script>
+
+    <script src="vendors/mask/jquery.maskedinput.min.js"></script>
+
+    <script src="vendors/moment/moment.min.js"></script>
+
+    <script src="vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+
+     <!-- bootstrap-datetimepicker -->
+     <link href="vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
+     <script src="vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script> 
+
+
+    <link href="css/bootstrap-editable.css" rel="stylesheet"/>
+	<script src="js/bootstrap-editable.min.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/forms.js"></script>
+  </body>
 </html>
