@@ -284,7 +284,7 @@
     <script src="js/custom.js"></script>
     <script src="js/forms.js"></script>
 	<script type="text/javascript">
-	Highcharts.chart('container', {
+	Highcharts.chart('chart', {
 		title: {
 			text: 'Pie point CSS'
 		},
