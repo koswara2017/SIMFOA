@@ -18,7 +18,27 @@
     <link href="vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
 
     <link href="css/forms.css" rel="stylesheet">
+<style type="text/css">
+	@import 'lib/highcharts/css/highcharts.css';
 
+	#container {
+		height: 400px;
+		max-width: 800px;
+		min-width: 320px;
+		margin: 0 auto;
+	}
+	.highcharts-pie-series .highcharts-point {
+		stroke: #EDE;
+		stroke-width: 2px;
+	}
+	.highcharts-pie-series .highcharts-data-label-connector {
+		stroke: silver;
+		stroke-dasharray: 2, 2;
+		stroke-width: 2px;
+	}
+</style>
+<script src="lib/highcharts/js/highcharts.js"></script>
+<script src="lib/highcharts/js/modules/exporting.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -164,7 +184,7 @@
 							
 			  			</div>
 			  			<div class="content-box-large box-with-header">
-				  			
+				  			<div id="chart"></div>
 							
 							
 			<form action="<?php echo $editFormAction; ?>" method="post" name="FMHS" id="FMHS">
@@ -263,5 +283,31 @@
 
     <script src="js/custom.js"></script>
     <script src="js/forms.js"></script>
+	<script type="text/javascript">
+	Highcharts.chart('container', {
+		title: {
+			text: 'Pie point CSS'
+		},
+		xAxis: {
+			categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+		},
+		series: [{
+			type: 'pie',
+			allowPointSelect: true,
+			keys: ['name', 'y', 'selected', 'sliced'],
+			data: [
+				['Apples', 29.9, false],
+				['Pears', 71.5, false],
+				['Oranges', 106.4, false],
+				['Plums', 129.2, false],
+				['Bananas', 144.0, false],
+				['Peaches', 176.0, false],
+				['Prunes', 135.6, true, true],
+				['Avocados', 148.5, false]
+			],
+			showInLegend: true
+		}]
+	});
+	</script>
   </body>
 </html>
