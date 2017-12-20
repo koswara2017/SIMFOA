@@ -1,7 +1,7 @@
 <?php
 include('db_con.php');
 
-$stmt=$db_con->prepare('select * from books');
+$stmt=$db_con->prepare('select * from alumni');
 $stmt->execute();
 
 
@@ -20,26 +20,40 @@ $stmt->execute();
       <div class="panel-body">
         <table border="1" class="table table-bordered table-striped">
     				<tr>
-    					<th>Sr NO.</th>
-    					<th width="120">Book Name</th>
-    					<th>Book Author</th>
-              	<th>Book ISBN</th>
+    					<th>Mem NO.</th>
+    					<th>User Name</th>
+						<th>Name</th>
+						<th>Alamat</th>
+						<th>TTL</th>
+						<th>No.Telp</th>
+						<th>Jenis Kelamin</th>
+						<th>Email</th>
+						<th>Angkatan</th>
+						<th>Prodi</th>
+						<th>Tempat Kerja</th>
     				</tr>
     			<?php
 
     			while($row=$stmt->FETCH(PDO::FETCH_ASSOC)){
     				echo '
     				<tr>
-    					<td>'.$row["book_id"].'</td>
-    					<td>'.$row["book_name"].'</td>
-    					<td>'.$row["book_author"].'</td>
-              <td>'.$row["book_isbn"].'</td>
+    					<td>'.$row["mem_id"].'</td>
+    					<td>'.$row["username"].'</td>
+    					<td>'.$row["name"].'</td>
+    					<td>'.$row["curr_loc"].'</td>
+    					<td>'.$row["perm_loc"].'</td>
+    					<td>'.$row["phone"].'</td>
+    					<td>'.$row["gender"].'</td>
+    					<td>'.$row["email"].'</td>
+    					<td>'.$row["batch"].'</td>
+    					<td>'.$row["branch"].'</td>
+    					<td>'.$row["job"].'</td>
     				</tr>
     				';
     			}
     			?>
     		</table>
-    		<a href="export-book.php">Export To Excel</a>
+    		<a href="export-to-excel.php">Export To Excel</a>
 
       </div>
 
@@ -48,8 +62,6 @@ $stmt->execute();
   </div>
 
 </div>
-
-
 
 </body>
 </html>

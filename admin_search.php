@@ -1,10 +1,12 @@
 <?php
+	error_reporting(0);
 	require('admin_auth.php');
 	require_once('stringops.php');
 	$param_batch="";
 	$param_roll="";
 	$param_name="";
 	$param_active="";
+	$del="";
 	$num_param=count($_GET);
 	
 	if ($num_param>0)
@@ -13,6 +15,7 @@
 		$param_roll=clean($_GET['param_roll']);
 		$param_name=clean($_GET['param_name']);
 		$param_active=clean($_GET['param_active']);
+		$del=clean($_GET['del']);
 	}
 
 	?>
@@ -42,7 +45,13 @@
  
 
 <div class="container">
-
+<?php 
+		if(count($_GET)>0)
+		{  
+		  if($_GET['del']=='success')
+			echo '<div class="alert alert-success"><span class="glyphicon glyphicon-ok-sign"></span> Berhasil Menghapus Data Alumni </div>';
+		}
+	?>
 	<div class="col-md-8 col-md-offset-2 well" align="center">
 
 		<h2>Search Alumni Database</h2>
@@ -50,6 +59,7 @@
 		<h4><a href="admin_home.php"><span class='glyphicon glyphicon-home'></span> Back to Admin Home</a></h4>
 	</div>
 	<div class="row">
+	
 	<div class="col-md-10 col-md-offset-1 well" align="center">
   	<form action="<?php  echo $_SERVER['PHP_SELF'] ?>" method="GET" class="form-inline">
   		
@@ -76,7 +86,8 @@
         <th>Name</th>
         <th>Roll Number</th>
         <th>Batch</th>
-       	<th>Active</th> 
+       	<th>Active</th>
+       	<th>Aksi</th> 
       </tr>
     </thead>
     <?php
@@ -157,6 +168,7 @@
         <td><span class="c1"><?php  echo $roll; ?></span></td>
         <td><span class="c1"><?php  echo $batch; ?></span></td>
         <td><span class="c1"><?php  echo $active; ?></span></td>
+		<td><span class="c1"><a href="<?php  echo 'admin_delete.php?param='.$roll; ?>">Hapus</a></span></td>
       </tr>
       	<?php
 				$i++;

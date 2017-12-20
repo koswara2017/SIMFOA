@@ -4,15 +4,27 @@ include('db_con.php');
 $conn = new mysqli('localhost', 'root', '');
 mysqli_select_db($conn, 'alumni');
 
-$setSql = "SELECT `ur_Id`,`ur_username`,`ur_password` FROM `tbl_user`";
+$setSql = "SELECT * FROM `alumni`";
 $setRec = mysqli_query($conn,$setSql);
 
-$stmt=$db_con->prepare('select * from books');
+$stmt=$db_con->prepare('select * from alumni');
 $stmt->execute();
 
 
 $columnHeader ='';
-$columnHeader = "Sr NO"."\t"."Book Name"."\t"."Book Author"."\t"."Book ISBN"."\t";
+$columnHeader = 
+"Mem NO"."\t".
+"User Name"."\t".
+"Name"."\t".
+"Alamat"."\t".
+"TTL"."\t".
+"No.Telp"."\t".
+"Foto"."\t".
+"Jenis Kelamin"."\t".
+"Email"."\t".
+"Angkatan"."\t".
+"Prodi"."\t".
+"Tempat Kerja"."\t";
 
 
 $setData='';
