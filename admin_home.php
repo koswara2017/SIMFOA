@@ -19,7 +19,7 @@
 
     <link href="css/forms.css" rel="stylesheet">
 <style type="text/css">
-	@import 'lib/highcharts/css/highcharts.css';
+	@import 'lib/code/css/highcharts.css';
 
 	#container {
 		height: 400px;
@@ -37,8 +37,8 @@
 		stroke-width: 2px;
 	}
 </style>
-<script src="lib/highcharts/js/highcharts.js"></script>
-<script src="lib/highcharts/js/modules/exporting.js"></script>
+		<script src="lib/code/js/highcharts.js"></script>
+		<script src="lib/code/js/modules/exporting.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -184,8 +184,9 @@
 							
 			  			</div>
 			  			<div class="content-box-large box-with-header">
-				  			<div id="chart"></div>
-							
+						<div id="mygraph">
+			  			
+			  		</div>	
 							
 			<form action="<?php echo $editFormAction; ?>" method="post" name="FMHS" id="FMHS">
            
@@ -253,6 +254,42 @@
             
          </div>
       </footer>
+<script type="text/javascript">
+
+Highcharts.chart('mygraph', {
+
+    title: {
+        text: 'Pie point CSS'
+    },
+
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+        type: 'pie',
+        allowPointSelect: true,
+        keys: ['name', 'y', 'selected', 'sliced'],
+        data: [
+            <?php
+					    include "connection.php";
+						$query = mysqli_query($con,"SELECT batch, COUNT( * ) AS total_muncul FROM alumni GROUP BY batch");
+					 
+						while ($row = mysqli_fetch_array($query)) {
+							$browsername = $row['batch'];
+							$jumlah = $row['total_muncul'];
+							?>
+							[ 
+								'<?php echo $browsername ?>', <?php echo $jumlah; ?>
+							],
+							<?php
+						}
+						?>
+        ],
+        showInLegend: true
+    }]
+});
+</script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
@@ -283,38 +320,5 @@
 
     <script src="js/custom.js"></script>
     <script src="js/forms.js"></script>
-	<script type="text/javascript">
-	Highcharts.chart('chart', {
-		title: {
-			text: 'Data Alumni Perangkatan'
-		},
-		xAxis: {
-			categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-		},
-		series: [{
-			type: 'pie',
-			allowPointSelect: true,
-			keys: ['name', 'y', 'selected', 'sliced'],
-			data: [
-			
-			<?php
-			include "connection.php";
-			$qry = mysqli_query($con,"SELECT batch, COUNT( * ) AS total_muncul FROM alumni");
-		 
-			while ($row = mysqli_fetch_array($qry)) {
-				$browsername = $row['batch'];
-				$jumlah = $data['total_muncul'];
-				?>
-				[ 
-					'<?php echo $browsername ?>', <?php echo $jumlah; ?>
-				],
-				<?php
-			}
-			?>
-			]
-			showInLegend: true
-		}]
-	});
-	</script>
   </body>
 </html>
