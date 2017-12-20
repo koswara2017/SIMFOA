@@ -50,7 +50,7 @@
 
 <body>
 
-<?php require_once('navbar_main.php');?>
+
 
 <div class="container">
   <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post"

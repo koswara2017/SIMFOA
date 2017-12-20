@@ -1,7 +1,7 @@
 <?php
     require_once('connection.php');
     require_once('stringops.php');
-    $branches=array('CSE', 'EE','ME');
+    $branches=array('Teknik Informatika', 'Komputer Akuntansi','Manajemen Informatika');
 
 
     $name     ='';

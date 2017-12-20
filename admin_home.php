@@ -1,162 +1,267 @@
 <!DOCTYPE html>
-<?php 
-	require_once('admin_auth.php');
-?>
+
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Admin Panel</title>
-<link href="css/admin_css/site.css" rel="stylesheet">
-<script src="js/admin_js/jquery-1.7.2.min.js"></script>
-<script src="js/admin_js/site.js"></script>
-<style>
-.tabbedPanels {
-	width: 100%;
-	float: left;
-	margin-right: 10px;	
-}
-.tabs {
-	margin: 0;
-	padding: 0;	
-	zoom : 1;
-}
-.tabs li {
-	float: left;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-.tabs a {
-	display: block;
-	text-decoration: none;
-	padding: 3px 5px;
-	background-color: rgb(110,138,195);
-	margin-right: 10px;
-	border: 1px solid rgb(153,153,153);
-	margin-bottom: -1px;
-}
-.tabs .active {
-	border-bottom: 1px solid white;
-	background-color: white;
-	color: rgb(51,72,115);
-	position: relative;
-}
+  <head>
+    <title>admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery UI -->
+    <link href="css/jquery-ui.css" rel="stylesheet" media="screen">
 
-.panelContainer {
-	clear: both;
-	margin-bottom: 25px;	
-	border: 1px solid rgb(153,153,153);	
-	background-color: white;
-	padding: 10px;
-}
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
 
-.panel h2 {
-	color: rgb(57,78,121);
-	text-shadow: none;		
-}
-.panel p {
-	color: black;	
-}
-</style>
-<script src="js/admin_js/jquery-1.7.2.min.js"></script>
-<script>
-$(document).ready(function() {
-	$('.tabs a').bind('click focus',function() {
-		var $this = $(this);
-		
-		// hide panels
-		$this.parents('.tabbedPanels')
-		    .find('.panel').hide().end()
-			.find('.active').removeClass('active');
-		    
-		// add active state to new tab
-		$this.addClass('active').blur();	
-		
-		// retrieve href from link (is id of panel to display)
-		var panel = $this.attr('href');
-		// show panel
-		$(panel).show();
-		// don't follow link
-		return false;
-	}); // end click
-	
-	$('.tabs').find('li:first a').click();
-}); // end ready
-</script>
-</head>
-<body>
-<div class="wrapper">
-	<div class="header">
-		
-		<p class="logo">IIT<i></i> Indore <i class="mm">IITI<br>Alumni<br>Network</i></p>
- <div style="text-align:center">
-    <div style="text-align:left; width:300px;">
-       <a href="admin_logout.php">Logout</a>
-    </div>
-</div>
-	<div class="content">
-		<div class="main">
-			<h1>Admin Panel</h1>
-		  <div class="tabbedPanels" id="tabbed1">
-			<ul class="tabs">
-  <li><a href="#panel1" tabindex="1">Approve Blog Posts</a></li>
-  <li><a href="#panel2" tabindex="2">Approve Accounts</a></li>
-</ul>
-<div class="panelContainer">
-<div id="panel1" class="panel">
-<p><img src="images/admin_images/small/iit.png" alt="IIT Indore" width="60" height="60" class="imgRight"></p>
-<p><a href="admin_forum_form.php" style="color: rgb(0,0,0)">Write Blog Post</a></p>
-<p><a href="admin_approve_forum_post.php" style="color: rgb(0,0,0)">Approve Blog Posts</a></p>
-<p><a href="blog.php" style="color: rgb(0,0,0)">View Blog</a></p>
-</div>
-<div id="panel2" class="panel">
-<p><a href="admin_approve_pwd_request.php" style="color: rgb(0,0,0)">View and Approve Password Reset Requests</a></p>
-<p></p></div>
-</div>
-</div>
-<div class="tabbedPanels" id="tabbed2">
-			<ul class="tabs">
-  <li><a href="#panel4" tabindex="4">Alumni Related Actions</a></li>
-  <li><a href="#panel5" tabindex="5">Create Events</a></li>
-</ul>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <link href="vendors/select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
 
-<div class="panelContainer">
-<div id="panel4" class="panel">
-<p><a href="admin_search.php" style="color: rgb(0,0,0)">Search Alumni Database</a></p>
-<p><a href="admin_send_mail.php" style="color: rgb(0,0,0)">Send Mail</a></p>
-<p><a href="admin_generate_users.php" style="color: rgb(0,0,0)">Create a Batch Of Users</a></p>
-</div>
+    <link href="css/forms.css" rel="stylesheet">
 
-<div id="panel5" class="panel">
-<p><a href="admin_allevents.php" style="color: rgb(0,0,0)">View All Events</a></p>
-<p><a href="admin_events.php" style="color: rgb(0,0,0)">Event Calendar</a></p>
-<p></p></div>
-
-</div>
-</div>
-
-		</div>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">Halaman Admin</a></h1>
+	              </div>
+	           </div>
+	           <div class="col-md-5">
+	              <div class="row">
+	                <div class="col-lg-12">
+	                  <!--div class="input-group form">
+	                       <input type="text" class="form-control" placeholder="Search...">
+	                       <!--span class="input-group-btn">
+	                         <button class="btn btn-primary" type="button">Search</button>
+	                       </span-->
+	                  </div-->
+	                </div>
+	              </div>
+	           </div>
+	           <div class="col-md-2">
+	              <div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+	                        <ul class="dropdown-menu animated fadeInUp">
+	                          
+	                          <li><a href="admin_logout.php">Logout</a></li>
+	                        </ul>
+	                      </li>
+	                    </ul>
+	                  </nav>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
 	</div>
-	
-</div>
-  <div id="resources">
-    <p class="open">+</p>
-    <h2>Quick Functions</h2>
-    <ul class="nav">
-      <li><a href="admin_approve_pwd_request.php">Password Reset Requests</a></li>
-      <li><a href="admin_forum_form.php">Create A Blog Post</a></li>
-      <li><a href="admin_search.php">Search Alumni Database</a></li>
-      <li><a href="admin_approve_forum_post.php">Pending Blog Posts</a></li>
-      <li><a href="admin_send_mail.php">Compose Mail</a></li>
-      <li><a href="admin_generate_users.php">Create Batch Of Users</a></li>
-      <li><a href="admin_logout.php">Log Out</a></li>
-    </ul>
-    <h2>Links to Pages</h2>
-    <ul class="nav">
-      <li><a href="http://www.iiti.ac.in">IITI Website</a></li>
-      <li><a href="index.php/">IITI Alumni Website</a></li>
-      <li><a href="blog.php">Blog</a></li>
-    </ul>
-  </div>
-</body>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                  
+                    <li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Quick Fungtions
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_approve_pwd_request.php">Reset Password Request</a></li>
+                            <li><a href="admin_forum_form.php">Create a Blog</a></li>
+							<li><a href="admin_approve_forum_post.php">Pending Blog Post</a></li>
+							<li><a href="admin_send_mail.php">Compos Mail</a></li>
+							
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Approve Blog
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_forum_form.php">Write Blog Posts</a></li>
+                            <li><a href="admin_approve_forum_post.php">Approve Blog Posts</a></li>
+							<li><a href="blog.php">View Blog</a></li>
+                        </ul>
+                    </li>
+					
+					<li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Approve Account
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_approve_pwd_request.php">Password reset request</a></li>
+                        </ul>
+                    </li>
+					
+					<li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Alumni Related
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_send_mail.php">Send mail</a></li>
+							 <li><a href="admin_search.php">Search Alumni</a></li>
+                        </ul>
+                    </li>
+					<li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Create Event
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="admin_allevents">View All Event</a></li>
+							 <li><a href="term.php">admin_events.php</a></li>
+                        </ul>
+                    </li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+
+	  			<div class="row">
+	  				<div class="col-md-6">
+	  					
+	  				</div>
+	  				
+
+	  			<div class="row">
+	  				<div class="col-md-6">
+	  					
+			  			
+	  				</div>
+
+	  				
+	  			</div>
+				<div>
+
+	  			<div class="row">
+	  				<div class="col-md-12 panel-info">
+			  			<div class="content-box-header panel-heading">
+		  					<div class="panel-title ">Beranda</div>
+							
+							
+			  			</div>
+			  			<div class="content-box-large box-with-header">
+				  			
+							
+							
+			<form action="<?php echo $editFormAction; ?>" method="post" name="FMHS" id="FMHS">
+           
+		   
+            
+         </form>
+							
+							
+							
+							
+							
+						</div>
+			  		</div>
+	  			</div>
+				</div>
+
+
+	  			<div class="row">
+	  				<div class="col-md-6 panel-default">
+			  			
+			  		</div>
+
+	  				<div class="col-md-6 panel-default">
+			  			
+			  		</div>
+	  			</div>
+
+
+	  			<div class="row">
+					<div class="col-md-6">
+						
+					</div>
+
+					<div class="col-md-6">
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						
+				
+					
+					
+					</div>
+				</div>
+
+
+	  		<!--  Page content -->
+		  </div>
+		</div>
+    </div>
+
+    <footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2017 || Depelovment</a>
+            </div>
+            
+         </div>
+      </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
+
+    <script src="vendors/select/bootstrap-select.min.js"></script>
+
+    <script src="vendors/tags/js/bootstrap-tags.min.js"></script>
+
+    <script src="vendors/mask/jquery.maskedinput.min.js"></script>
+
+    <script src="vendors/moment/moment.min.js"></script>
+
+    <script src="vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+
+     <!-- bootstrap-datetimepicker -->
+     <link href="vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
+     <script src="vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script> 
+
+
+    <link href="css/bootstrap-editable.css" rel="stylesheet"/>
+	<script src="js/bootstrap-editable.min.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/forms.js"></script>
+  </body>
 </html>

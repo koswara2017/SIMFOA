@@ -58,7 +58,7 @@
         <br>
         <div align="center"><a href="register.php">create acount</a></div>
         <br>
-        <div align="center"><a href="admin_index.php">Administrator Login</a></div>
+        
         </div>
   </form>
 </div>

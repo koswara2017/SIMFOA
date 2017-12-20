@@ -97,7 +97,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Name:
+          Nama Lengkap:
         </div>
       </td>
 
@@ -107,7 +107,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Batch:
+          Angkatan:
         </div>
       </td>
 
@@ -117,7 +117,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Branch:
+          Jurusan Terkahir:
         </div>
       </td>
 
@@ -127,7 +127,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Phone:
+          No Telepon:
         </div>
       </td>
 
@@ -137,7 +137,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Email ID:
+          Email :
         </div>
       </td>
 
@@ -147,7 +147,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Current Location:
+          Tempat & Tanggal Lahir:
         </div>
       </td>
 
@@ -157,7 +157,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Permanent Location:
+          Alamat Lengkap:
         </div>
       </td>
 
@@ -167,7 +167,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     <tr>
       <td valign="top">
         <div class="c2">
-          Occupation:
+         Pekerjaan:
         </div>
       </td>
 

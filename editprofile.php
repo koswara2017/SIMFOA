@@ -16,7 +16,7 @@
   <!--LINK CSS FILES-->
   <link rel="stylesheet" type="text/css" href="css/general.css"> 
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
+<link rel="shortcut icon" href="favicon.ico">
 
   <title>Edit Profile</title>
 </head>
@@ -98,21 +98,21 @@
             <table class="table table-striped" align="center">
         <tr>
           <td>
-            <div for="name">Full Name:</div>
+            <div for="name">Nama Lengkap:</div>
           </td>
-          <td><input type="text" class="form-control" name="name" placeholder="Jose Mourinho" value="<?php echo $name;?>" required></td>
+          <td><input type="text" class="form-control" name="name" placeholder="nama lengkap" value="<?php echo $name;?>" required></td>
         </tr>
 
         <tr>
         <td>
           <div>
-            Batch:<br>[Year of passing out]
+            Tahun Lulus:<br>
           </div>
         </td>
 
         <td>
         <select name="batch" class="form-control" required>
-      <?php for ($i = 2013; $i <= 2099; $i++) 
+      <?php for ($i = 1945; $i <= 2099; $i++) 
         {
           if(intval($batch)==$i)
           {?>
@@ -131,7 +131,7 @@
         <tr>
         <td>
           <div>
-            Branch:
+            Program  Studin Terakhir:
           </div>
         </td>
 
@@ -160,37 +160,37 @@
         <tr>
         <td>
           <div>
-            Email ID:
+            Email:
           </div>
         </td>
 
-        <td><input type="email" name="email" class="form-control" value="<?php echo $email;?>" required placeholder="no_trophies@arsenal.co.uk"></td>
+        <td><input type="email" name="email" class="form-control" value="<?php echo $email;?>" required placeholder="user@mail.com"></td>
         </tr>
 
         <tr>
         <td>
           <div>
-            Phone:
+            No Telepon:
           </div>
         </td>
 
-        <td><input type="text" name="phone" class="form-control" placeholder="9871124100" required value="<?php echo $phone;?>"></td>
+        <td><input type="text" name="phone" class="form-control" placeholder="083816136414" required value="<?php echo $phone;?>"></td>
         </tr>
 
         <tr>
         <td>
           <div>
-            Current Location:
+            Tempat & Tanggal Lahir:
           </div>
         </td>
 
-        <td><input type="text" class="form-control" placeholder="London" name="curr_loc" value="<?php echo $curr_loc;?>"></td>
+        <td><input type="text" class="form-control" placeholder="subang" name="curr_loc" value="<?php echo $curr_loc;?>"></td>
         </tr>
 
         <tr>
         <td>
           <div>
-            Permanent Location:
+            Alamat :
           </div>
         </td>
 
@@ -199,12 +199,12 @@
 
         <tr>
         <td>
-          <div align="right">
-            Current Occupation:
+          <div>
+            Pekerjaan:
           </div>
         </td>
 
-        <td><input type="text" class="form-control" placeholder="Manager at Chelsea FC" name="job" value="<?php echo $job;?>"></td>
+        <td><input type="text" class="form-control" placeholder="Manager" name="job" value="<?php echo $job;?>"></td>
         </tr>
 
         <tr>
