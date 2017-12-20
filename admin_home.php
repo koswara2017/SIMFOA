@@ -286,7 +286,7 @@
 	<script type="text/javascript">
 	Highcharts.chart('chart', {
 		title: {
-			text: 'Pie point CSS'
+			text: 'Data Alumni Perangkatan'
 		},
 		xAxis: {
 			categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -296,15 +296,22 @@
 			allowPointSelect: true,
 			keys: ['name', 'y', 'selected', 'sliced'],
 			data: [
-				['Apples', 29.9, false],
-				['Pears', 71.5, false],
-				['Oranges', 106.4, false],
-				['Plums', 129.2, false],
-				['Bananas', 144.0, false],
-				['Peaches', 176.0, false],
-				['Prunes', 135.6, true, true],
-				['Avocados', 148.5, false]
-			],
+			
+			<?php
+			include "connection.php";
+			$qry = mysqli_query($con,"SELECT batch, COUNT( * ) AS total_muncul FROM alumni");
+		 
+			while ($row = mysqli_fetch_array($qry)) {
+				$browsername = $row['batch'];
+				$jumlah = $data['total_muncul'];
+				?>
+				[ 
+					'<?php echo $browsername ?>', <?php echo $jumlah; ?>
+				],
+				<?php
+			}
+			?>
+			]
 			showInLegend: true
 		}]
 	});
