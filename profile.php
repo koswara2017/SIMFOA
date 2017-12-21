@@ -182,7 +182,7 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
       if($canView!=1)
       {
         if(requestStatus($_SESSION['SESS_USERNAME'], $username)==0)
-          echo '<a href="send_vis_request.php?param='.$username.'"><span class="glyphicon glyphicon-plus-sign"></span> Send Visibility Request</a>';
+          echo '<a href="send_vis_request.php?param='.$username.'">';
         else
           echo '<span class="glyphicon glyphicon-transfer"></span> Visibility Request Sent';
       }

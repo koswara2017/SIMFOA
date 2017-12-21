@@ -116,20 +116,7 @@
                     <!-- Main menu -->
                     <li><a href="admin_home.php"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                   
-                    <li class="submenu">
-                         <a href="#">
-                            <i class="glyphicon glyphicon-list"></i> Quick Fungtions
-                            <span class="caret pull-right"></span>
-                         </a>
-                         <!-- Sub menu -->
-                         <ul>
-                            <li><a href="admin_approve_pwd_request.php">Reset Password Request</a></li>
-                            <li><a href="admin_forum_form.php">Create a Blog</a></li>
-							<li><a href="admin_approve_forum_post.php">Pending Blog Post</a></li>
-							<li><a href="admin_send_mail.php">Compos Mail</a></li>
-							
-                        </ul>
-                    </li>
+                   
                     <li class="submenu">
                          <a href="#">
                             <i class="glyphicon glyphicon-list"></i> Approve Blog
@@ -172,8 +159,8 @@
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="admin_allevents">View All Event</a></li>
-							 <li><a href="term.php">admin_events.php</a></li>
+                            <li><a href="admin_allevents.php">View All Event</a></li>
+							 <li><a href="admin_events.php">Events</a></li>
                         </ul>
                     </li>
                 </ul>

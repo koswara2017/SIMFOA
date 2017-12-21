@@ -31,9 +31,9 @@ function getVisibility($b)
 	$qry 	  = "SELECT * FROM $table WHERE username='$b'";
     $result	  = mysqli_query($con,$qry);
     $member   = mysqli_fetch_assoc($result);
-    $visibility    = $member['visibility'];
+   // $visibility    = $member['visibility'];
 
-    return trim($visibility);
+    //return trim($visibility);
 }
 
 function fromSameBatch($a, $b)

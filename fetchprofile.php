@@ -28,14 +28,14 @@
       $imgbool  =$member['imgbool'];
       $img      =$member['img'];
       $mem_id   =$member['mem_id'];
-      if($visibility==1)
-      {
+      
+      
         $email    =$member['email'];
         $phone    =$member['phone'];
         $curr_loc =$member['curr_loc'];
         $perm_loc =$member['perm_loc'];
         $job      =$member['job'];
-      }
+      
     }
     
   ?>

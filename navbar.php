@@ -39,13 +39,8 @@ echo '<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">';
     else
 		echo '<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>';
 
-    if ($filepath=='/profile_visibility.php') 
-        echo '<li class="active"><a href="#"><span class="glyphicon glyphicon-eye-open"></span> Profile Visibility</a></li>';
-    else
-        echo '<li><a href="profile_visibility.php"><span class="glyphicon glyphicon-eye-open"></span> Profile Visibility</a></li>';
-
 	if ($filepath=='/search.php') 
-    	echo '<li class="active"><a href="#"><span class="glyphicon glyphicon-search"></span> Search Database</a></li>';
+    	echo '<li class="active"><a href="#"><span class="glyphicon glyphicon-search"></span> Search Alumni</a></li>';
     else
 		echo '<li><a href="search.php"><span class="glyphicon glyphicon-search"></span> Search Database</a></li>';
 
