@@ -1,6 +1,6 @@
 <?php
-require('auth.php');
-require_once('stringops.php');
+require('inc/auth.php');
+require_once('admin/inc/stringops.php');
 
 if(count($_GET)==2 && requestStatus($_GET['sent_by'], $_SESSION['SESS_USERNAME']))
 {

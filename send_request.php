@@ -1,5 +1,5 @@
 <?php
-require('auth.php');
+require('inc/auth.php');
 $doc='request for documents';
 $accom='request for accomodation';
 
@@ -62,11 +62,11 @@ $(document).ready(function() {
 </head>
 
 <body>
-<?php require('navbar.php'); ?>
+<?php require('inc/navbar.php'); ?>
 <div class="container">
   <div class="col-md-12" style="margin-top: 75px;">
   <div class="well">
-    <form action="send_request_exec.php" method="POST" name="pwdreset" id="pwdreset">
+    <form action="inc/send_request_exec.php" method="POST" name="pwdreset" id="pwdreset">
     <div class="panel-heading">
             <h3>Send request to Institute</h3>
     </div>

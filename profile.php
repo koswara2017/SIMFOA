@@ -1,31 +1,8 @@
-<!--  NOTE!! Do not forget to add username, password and database name on getImage.php And you will need to update
-your alumni database table. Instructions for that would be on updatetable.txt-->
-
-<?php
-        require('auth.php');
-?>
-
-
-<!--Dont forget to add edit profile-->
-
-<html>
-<head>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-  <!--LINK CSS FILES-->
-  <link rel="stylesheet" type="text/css" href="css/general.css"> 
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link rel="shortcut icon" href="favicon.ico">
-  <title>Profile</title>
-</head>
-
-<body>
   <?php
-    require_once('navbar.php');
-    require_once('stringops.php');
+	require_once('inc/auth.php');
+    require_once('admin/inc/stringops.php');
     $paramed=count($_GET);
-    require_once('fetchprofile.php');
+    require_once('admin/inc/fetchprofile.php');
     if ($paramed==1) 
     {
       $username=trim($_GET['param']);
@@ -55,149 +32,151 @@ your alumni database table. Instructions for that would be on updatetable.txt-->
     }
     
   ?>
+<?php
+
+include "inc/header.php";
+?>
+
+<!--NAVIGATION BAR START-->
+  <?php require_once('inc/navbar.php'); ?>
+<!--NAVIGATION BAR END-->
 
 
 
 <div class="containter">
 
-<div class="col-md-12" style="margin-top: 75px;">
+	<div class="col-md-12" style="margin-top: 75px;">
 
-  <div class="panel panel-info">
-  <div class="panel-heading" align="center">
-    
-    <?php 
-      if ($imgbool==1) {
+	  <div class="panel panel-info">
+	  <div class="panel-heading" align="center">
+		
+		<?php 
+		if ($imgbool==1) {
+		?>
+		  <a href="profile.php">
+			<?php
+			  echo '<img width="100" class="img-circle" src="admin/inc/getImage.php?id='.$mem_id. '"/>';
+			?>
+		  </a>
+		<?php
+		}
+		if ($imgbool==0) {
+		?>
+		  <a href="profile.php">
+			<?php
+			  echo '<img width="100" class="img-circle" src="admin/images/user-icon.png"/>';
+			?>
+		  </a>
+		<?php
+		}
+		?>
+	  <h3><b><?php echo $username;?><b></h3>
+	  </div>
 
-    ?>
-    <?php
-                                        
-                                          
-                                         /* if ( !($result = mysql_query($query,$con)) ) {
-                                            die('<p>Error reading database</p></body></html>');
-                                          } else {
-                                                $row = mysql_fetch_assoc($result);*/
-                                              ?>
-                                              
-                                              <a href="profile.php">
-                                                <?php
-                                                  echo '<img width="100" class="img-circle" src="getImage.php?id='.$mem_id. '"/>';
-                                                ?>
-                                              </a>
-                                              
+	  <table class="table table-striped">
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			  Nama Lengkap:
+			</div>
+		  </td>
 
-  <?php
-                                            //}    
-                                      //mysql_close($con);
-  }
-  ?>
-  <h3><b><?php echo $username;?><b></h3>
-  </div>
+		  <td valign="top"><?php echo $name ?></td>
+		</tr>
 
-  <table class="table table-striped">
-    <tr>
-      <td valign="top">
-        <div class="c2">
-          Nama Lengkap:
-        </div>
-      </td>
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			  Angkatan:
+			</div>
+		  </td>
 
-      <td valign="top"><?php echo $name ?></td>
-    </tr>
+		  <td valign="top"><?php echo $batch ?></td>
+		</tr>
 
-    <tr>
-      <td valign="top">
-        <div class="c2">
-          Angkatan:
-        </div>
-      </td>
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			  Jurusan Terkahir:
+			</div>
+		  </td>
 
-      <td valign="top"><?php echo $batch ?></td>
-    </tr>
+		  <td valign="top"><?php echo $branch ?></td>
+		</tr>
+		
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			  No Telepon:
+			</div>
+		  </td>
 
-    <tr>
-      <td valign="top">
-        <div class="c2">
-          Jurusan Terkahir:
-        </div>
-      </td>
+		  <td valign="top"><?php echo $phone ?></td>
+		</tr>
 
-      <td valign="top"><?php echo $branch ?></td>
-    </tr>
-    
-    <tr>
-      <td valign="top">
-        <div class="c2">
-          No Telepon:
-        </div>
-      </td>
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			  Email :
+			</div>
+		  </td>
 
-      <td valign="top"><?php echo $phone ?></td>
-    </tr>
+		  <td valign="top"><?php echo $email ?></td>
+		</tr>
 
-    <tr>
-      <td valign="top">
-        <div class="c2">
-          Email :
-        </div>
-      </td>
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			  Tempat & Tanggal Lahir:
+			</div>
+		  </td>
 
-      <td valign="top"><?php echo $email ?></td>
-    </tr>
+		  <td valign="top"><?php echo $curr_loc ?></td>
+		</tr>
 
-    <tr>
-      <td valign="top">
-        <div class="c2">
-          Tempat & Tanggal Lahir:
-        </div>
-      </td>
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			  Alamat Lengkap:
+			</div>
+		  </td>
 
-      <td valign="top"><?php echo $curr_loc ?></td>
-    </tr>
+		  <td valign="top"><?php echo $perm_loc ?></td>
+		</tr>
 
-    <tr>
-      <td valign="top">
-        <div class="c2">
-          Alamat Lengkap:
-        </div>
-      </td>
+		<tr>
+		  <td valign="top">
+			<div class="c2">
+			 Pekerjaan:
+			</div>
+		  </td>
 
-      <td valign="top"><?php echo $perm_loc ?></td>
-    </tr>
+		  <td valign="top"><?php echo $job ?></td>
+		</tr>
+	  </table>
 
-    <tr>
-      <td valign="top">
-        <div class="c2">
-         Pekerjaan:
-        </div>
-      </td>
-
-      <td valign="top"><?php echo $job ?></td>
-    </tr>
-  </table>
-
-  <div class="panel-footer" align="right">
-    <?php
-    if ($paramed==1)
-    {
-      if($canView!=1)
-      {
-        if(requestStatus($_SESSION['SESS_USERNAME'], $username)==0)
-          echo '<a href="send_vis_request.php?param='.$username.'">';
-        else
-          echo '<span class="glyphicon glyphicon-transfer"></span> Visibility Request Sent';
-      }
-    }
-    else
-    {      
-      echo '<a href="editprofile.php"><span class="glyphicon glyphicon-pencil"></span> Edit</a>';
-    }
-    ?>
-  </div>
+	  <div class="panel-footer" align="right">
+		<?php
+		if ($paramed==1)
+		{
+		  if($canView!=1)
+		  {
+			if(requestStatus($_SESSION['SESS_USERNAME'], $username)==0)
+			  echo '<a href="inc/send_vis_request.php?param='.$username.'">';
+			else
+			  echo '<span class="glyphicon glyphicon-transfer"></span> Visibility Request Sent';
+		  }
+		}
+		else
+		{      
+		  echo '<a href="editprofile.php"><span class="glyphicon glyphicon-pencil"></span> Edit</a>';
+		}
+		?>
+	  </div>
 
 
-  </div>
-  </div>
-<script src="//code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+	  </div>
+	  </div>
+<?php
+include "inc/footer.php";
+?>

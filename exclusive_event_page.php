@@ -9,13 +9,13 @@
     <title>Event</title>
 </head>
 <body>
- <?php require_once('navbar.php');?>
+ <?php require_once('inc/navbar.php');?>
 <div class="container">
 <div class="col-md-4 col-md-offset-4">
 <div class="panel panel-info">
 <div class="panel-heading">
     <h2><?php
-           require 'connection.php';
+           require 'inc/connection.php';
            $id= $_GET['id'];
            $getTitle_sql = "SELECT event_title FROM $table_cal WHERE id = '".$id."' ORDER BY event_start";
           $getTitle_res = mysqli_query($con, $getTitle_sql) or die(mysqli_error($con));
@@ -30,7 +30,7 @@
 
 <?php
 
-require('connection.php');
+require('inc/connection.php');
 
 $id=$_GET['id'];
 

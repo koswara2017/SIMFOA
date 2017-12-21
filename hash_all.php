@@ -5,7 +5,7 @@
 
 // NOTE: Length of password varchar field in SQL DB must be at least 64 to accommodate sha256 hash
 
-require('connection.php');
+require('admin/inc/connection.php');
 
 	$qry="SELECT username, password FROM $table_admin";
 	$result=mysqli_query($con, $qry);

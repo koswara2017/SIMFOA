@@ -1,16 +1,7 @@
-<html>
-<head>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--LINK CSS FILES-->
-  <link rel="stylesheet" type="text/css" href="css/general.css"> 
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link rel="shortcut icon" href="favicon.ico">
-  <title>Blog</title>
-</head>
-
-<body>
+<?php
+require_once('admin/inc/navbar_main.php');
+include "inc/header.php";
+?>
 <div class="container">
   <div class="col-md-4 col-md-offset-4">
   <div class="alert alert-success">
@@ -23,8 +14,8 @@
 <div class="col-md-10 col-md-offset-1">
 <?php 
 
-include "admin_connection.php"; 
-include "navbar_main.php";
+include "admin/inc/admin_connection.php"; 
+include "admin/inc/navbar_main.php";
 
 
 $sql  = " SELECT pf_id, pf_name,pf_title,pf_ppost, pf_username, DATE_FORMAT(pf_date, '%M %D, %Y at %H:%i') as pf_date FROM pforum "; 
@@ -42,7 +33,6 @@ while($row = mysqli_fetch_array($qry)){
 ?>
 </div>
   </div>
-  <script src="//code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php
+include "inc/footer.php";
+?>

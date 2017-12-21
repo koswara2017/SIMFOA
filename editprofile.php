@@ -1,38 +1,18 @@
 <?php
-  session_start();
-  if(!isset($_SESSION['SESS_USERNAME']) || (trim($_SESSION['SESS_USERNAME']) == '')) 
-  {
-    //check if logged in or not
-    header("location: index.php");
-    exit();
-  }
+require_once('inc/auth.php');
+include "inc/header.php";
 ?>
 
-<html>
-<head>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--LINK CSS FILES-->
-  <link rel="stylesheet" type="text/css" href="css/general.css"> 
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link rel="shortcut icon" href="favicon.ico">
-
-  <title>Edit Profile</title>
-</head>
-
-<body>
-
 <!--NAVIGATION BAR START-->
-  <?php require_once('navbar.php'); 
+  <?php require_once('inc/navbar.php'); 
 
-        require_once('fetchprofile.php');
+        require_once('admin/inc/fetchprofile.php');
         $username=$_SESSION['SESS_USERNAME'];
         fetchProfile($username,1);
   ?>
 <!--NAVIGATION BAR END-->
 
-  <form name="reg" action="edit_exec.php" method="post" id="reg" class="form-horizontal" role="form" enctype="multipart/form-data">
+  <form name="reg" action="inc/edit_exec.php" method="post" id="reg" class="form-horizontal" role="form" enctype="multipart/form-data">
     <div class="container">
 
 
@@ -83,7 +63,7 @@
                                         } else {
                                               $row = mysql_fetch_assoc($result);*/?>
                                               <a href="profile.php"><?php
-                                              echo '<img width="100"  src="getImage.php?id=' . $mem_id . '"/>  ' . "\n";
+                                              echo '<img width="100"  src="admin/inc/getImage.php?id=' . $mem_id . '"/>  ' . "\n";
                                               ?> </a> </div> <?php
                                           //}    
                                     //mysql_close($con);
@@ -226,5 +206,6 @@
 
 
   </form>
-</body>
-</html>
+<?php
+include "inc/footer.php";
+?>

@@ -4,7 +4,7 @@
 	*	FUNGSI GLOBAL SISTEM ALUMNI
 	*
 	*/
-	require_once(__DIR__ . '/lib/db.class.php');
+	require_once(__DIR__ . 'admin/lib/db.class.php');
 
 	/**
 	*	Cek apakah user sudah melakukan login

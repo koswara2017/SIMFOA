@@ -1,33 +1,9 @@
 <?php
-        //Start session
-        session_start();        
-
-        if(isset($_SESSION['SESS_USERNAME']) && (trim($_SESSION['SESS_USERNAME']) != '')) 
-        {
-                header("location: home.php");
-                exit();
-        }
+require_once('admin/inc/navbar_main.php');
+include "inc/header.php";
 ?>
-
-<!DOCTYPE html>
-
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-  	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-  	<link rel="stylesheet" type="text/css" href="css/general.css">
-  	<title>SIMFOALUMNI.com</title>
-  	<link rel="shortcut icon" href="favicon.ico">
-</head>
-
-<body>
-
-<?php require_once('navbar_main.php');?>
-
 <div class="container">
-  <form name="loginform" action="login_exec.php" method="post" id="loginform" class="form-signin">
+  <form name="loginform" action="inc/login_exec.php" method="post" id="loginform" class="form-signin">
 
         <div class="col-lg-4 col-lg-offset-4">
         <div class="row">
@@ -62,8 +38,6 @@
         </div>
   </form>
 </div>
-<!--INCLUDE SCRIPTS NECESSARY FOR BOOTSTRAP COMPONENTS-->
-  <script src="//code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php
+include "inc/footer.php";
+?>

@@ -9,51 +9,36 @@
         }
 ?>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-  	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-  	<link rel="stylesheet" type="text/css" href="css/general.css">
-  	<title>SIMFOALUMNI.com</title>
-  	<link rel="shortcut icon" href="favicon.ico">
-	
 	<script type="text/javascript">
+	  function validateForm()
+	  {
+		var a=document.forms["reg"]["username"].value;
+		var b=document.forms["reg"]["password"].value;
 
-  function validateForm()
-  {
-    var a=document.forms["reg"]["username"].value;
-    var b=document.forms["reg"]["password"].value;
-
-    if ((a==null || a=="") && (b==null || b=="") )
-    {
-      alert("All fields must be filled out");
-      return false;
-    }
-    if (a==null || a=="")
-    {
-      alert("Username cannot be empty");
-      return false;
-    }
-    if (b==null || b=="")
-    {
-      alert("Password cannot be empty");
-      return false;
-    }
-  
-  }
-  </script>
-</head>
-
-<body>
-
-
-
+		if ((a==null || a=="") && (b==null || b=="") )
+		{
+		  alert("All fields must be filled out");
+		  return false;
+		}
+		if (a==null || a=="")
+		{
+		  alert("Username cannot be empty");
+		  return false;
+		}
+		if (b==null || b=="")
+		{
+		  alert("Password cannot be empty");
+		  return false;
+		}
+	  
+	  }
+	</script>
+<?php
+require_once('admin/inc/navbar_main.php');
+include "inc/header.php";
+?>
 <div class="container">
-  <form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post"
+  <form name="reg" action="inc/code_exec.php" onsubmit="return validateForm()" method="post"
   id="reg">
         <div class="col-lg-4 col-lg-offset-4">
         <div class="row">
@@ -86,11 +71,6 @@
         </div>
   </form>
 </div>
-<!--INCLUDE SCRIPTS NECESSARY FOR BOOTSTRAP COMPONENTS-->
-  <script src="//code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
 <?php
-
+include "inc/footer.php";
 ?>

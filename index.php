@@ -1,72 +1,19 @@
-<!DOCTYPE html>
+<?php
+require_once('admin/inc/navbar_main.php');
+include "inc/header.php";
+?>
+<div class="container">
+  <div class="col-md-4 col-md-offset-4">
+  <br>
+  </div>
+</div>
 
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-  	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-  	<link href="css/carousel.css" rel="stylesheet">
-  	<title>SIMFOALUMNI.com</title>
-  	<link rel="shortcut icon" href="favicon.ico">
-</head>
-
-<body>
-		<?php require_once('navbar_main.php');?>
-
-
- <!--div id="myCarousel" class=" container carousel slide" data-ride="carousel">
-      <!-- Indicators >
-
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-
-
-      <div class="carousel-inner">
-
-        <div class="item active">
-          <img src="./images/pic1.jpg" alt="First slide">
-        </div>
-
-        <div class="item">
-          <img src="./images/pic1.jpg" alt="First slide">
-        </div>
-
-        <div class="item">
-          <img src="./images/pic1.jpg" alt="First slide">
-        </div>
-      </div>
-
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    
-    </div><!-- /.carousel -->
-
-
-    <div class="container">
-    	<div class="row">
-    		<div class="col-md-12 panel panel-default">
-    			<h2>Welcome Alumni</h2>
-    			<p>You may login and browse through the alumni database. Don't forget to check out the Blog section for articles by fellow alumni.</p>
-          <h2></h2>
-          <p></p>
-          <h2></h2>
-          <p>
-           
-          </p>
-    		</div>
-    	</div>
-    	
-    </div>
-
-
-<!--INCLUDE SCRIPTS NECESSARY FOR BOOTSTRAP COMPONENTS-->
-<script src="//code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="../../assets/js/docs.min.js"></script>
-<script src="js/holder.js"></script>
-</body>
-</html>
+<div class="container">
+		<div class="col-md-12 panel panel-default">
+			<h2>Welcome Alumni</h2>
+			<p>You may login and browse through the alumni database. Don't forget to check out the Blog section for articles by fellow alumni.</p>
+		</div>
+</div>
+<?php
+include "inc/footer.php";
+?>

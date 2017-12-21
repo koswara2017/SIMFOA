@@ -2,10 +2,10 @@
 <body>
 <link href="css/admin_css/site.css" rel="stylesheet">
 <?php 
-	require "admin/inc/admin_auth.php";
+	require "inc/admin_auth.php";
 ?>
 
-<form action="inc/generate_users.php" method="post">
+<form action="admin_new_user.php" method="post">
 <p>Enter the Batch name (e.g. cse , phd)<BR></p>
 <input name='batch' type='text' />
 <p>Enter the First Roll Of the Batch (e.g. 1200259)<BR></p>

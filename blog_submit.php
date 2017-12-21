@@ -1,24 +1,20 @@
-<?php require('auth.php');?>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-  <!--LINK CSS FILES-->
-  <link rel="stylesheet" type="text/css" href="css/general.css"> 
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="shortcut icon" href="favicon.ico">
-  <title>Write Blog Post</title>
+<?php
+require_once('inc/auth.php');
+include "inc/header.php";
+?>
 
-</head>
-<body>
-<?php require_once('navbar.php');?>
+<!--NAVIGATION BAR START-->
+  <?php require_once('inc/navbar.php'); ?>
+<!--NAVIGATION BAR END-->
+
+
 <div class="container">
   <div class="col-md-12" style="margin-top: 75px;">
   	<div class="well">
-    <form action="blog_exec.php" id="subForm" name="subForm" method="post" >
-<div class="panel-heading">
-            <h3>Write Blog Post</h3>
-    </div>
+    <form action="inc/blog_exec.php" id="subForm" name="subForm" method="post" >
+		<div class="panel-heading">
+				<h3>Write Blog Post</h3>
+		</div>
 		<table class="table table-striped" align="center">
 			<tr>
 				<td>
@@ -85,7 +81,6 @@
   </div>
 </div>
 </div>
-<script src="//code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php
+include "inc/footer.php";
+?>

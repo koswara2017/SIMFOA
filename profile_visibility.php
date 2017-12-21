@@ -1,8 +1,8 @@
 <?php
 
-require('auth.php');
-require_once('connection.php');
-require_once('stringops.php');
+require('inc/auth.php');
+require_once('admin/inc/connection.php');
+require_once('admin/inc/stringops.php');
 
 //status:: 0= pending 1=rejected, delete entry and add to user vis string: on accept
 
@@ -25,7 +25,7 @@ $result=mysqli_query($con,$qry);
 </head>
 
 <body>
-<?php require_once('navbar.php');?>   
+<?php require_once('inc/navbar.php');?>   
 
 <div class="container">
 <div class="col-md-16" style="margin-top: 75px;">
