@@ -7,7 +7,7 @@
   	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
   	<link href="css/carousel.css" rel="stylesheet">
-  	<title>SIMFOAALUMNI.com</title>
+  	<title>SIMFOALUMNI.com</title>
   	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -51,9 +51,9 @@
     		<div class="col-md-12 panel panel-default">
     			<h2>Welcome Alumni</h2>
     			<p>You may login and browse through the alumni database. Don't forget to check out the Blog section for articles by fellow alumni.</p>
-          <h2>News</h2>
-          <p>No new news.</p>
-          <h2>.......................</h2>
+          <h2></h2>
+          <p></p>
+          <h2></h2>
           <p>
            
           </p>
