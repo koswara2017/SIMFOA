@@ -246,7 +246,8 @@ $qry  = mysqli_query($con, $sql) or die("SQL Error: $sql<br>" . mysqli_error($co
 
 print "<h2>List of Requests pending approval:<h2><br>"; 
 print "<form method='post' action='{$_SERVER['PHP_SELF']}'>"; 
-print "<table border=1>"; 
+print "<table border=2  class='table table-striped table-hover'>"; 
+  print "<thead>"; 
   print "<tr>"; 
   print "<td><h4>Approve</h4></td>"; 
   print "<td><h4>Remove</h4></td>"; 
@@ -254,6 +255,7 @@ print "<table border=1>";
   print "<td><h4>Entered Form Inputs</h4></td>"; 
   print "<td><h4>Uploaded Image</h4></td>";
   print "</tr>"; 
+  print "</thead>"; 
 
 
 while($row = mysqli_fetch_array($qry)){
