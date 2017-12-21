@@ -42,7 +42,7 @@ echo '<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">';
 	if ($filepath=='/search.php') 
     	echo '<li class="active"><a href="#"><span class="glyphicon glyphicon-search"></span> Search Alumni</a></li>';
     else
-		echo '<li><a href="search.php"><span class="glyphicon glyphicon-search"></span> Search Database</a></li>';
+		echo '<li><a href="search.php"><span class="glyphicon glyphicon-search"></span> Search Alumni</a></li>';
 
     if ($filepath=='/events.php'||$filepath=='/event.php') 
         echo '<li class="active"><a href="events.php"><span class="glyphicon glyphicon-calendar"></span> Events</a></li>';
@@ -54,13 +54,7 @@ echo '<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">';
     else
         echo '<li><a href="blog_submit.php"><span class="glyphicon glyphicon-pencil"></span> Write Blog Post</a></li>';
 
-    if ($filepath=='/send_request.php') 
-        echo '<li class="active"><a href="send_request.php"><span class="glyphicon glyphicon-upload "></span> Request to Insti.</a></li>';
-    else
-        echo '<li><a href="send_request.php"><span class="glyphicon glyphicon-upload"></span> Request to Insti.</a></li>';
-
-
-
+   
 	if ($filepath=='/changepassword.php') 
     	echo '<li class="active"><a href="#"><span class="glyphicon glyphicon-lock"></span> Change Password</a></li>';
     else
