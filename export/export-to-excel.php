@@ -56,7 +56,6 @@ while( $data = mysql_fetch_array($siswa)){
             ->setCellValue('I'.$row, $data['batch'] )
             ->setCellValue('J'.$row, $data['branch'] )
             ->setCellValue('K'.$row, $data['job'] );
-$objPHPExcel->getColumnDimension(C)->setAutoSize(true);
 	$row++; // pindah ke row bawahnya ($row + 1)
 	$nomor++;
 }
