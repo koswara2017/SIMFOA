@@ -7,7 +7,11 @@ include "inc/header.php";
   <?php require_once('inc/navbar.php'); ?>
 <!--NAVIGATION BAR END-->
 
-
+<div class="container">
+  <div class="col-md-4 col-md-offset-4">
+  <br>
+  </div>
+</div>
 <div class="container">
     <div class="col-md-10  col-md-offset-1">
 		<div class="row">
