@@ -40,8 +40,8 @@
 		stroke-width: 2px;
 	}
 </style>
-		<script src="lib/code/js/highcharts.js"></script>
-		<script src="lib/code/js/modules/exporting.js"></script>
+		<script src="lib/code/highcharts.js"></script>
+		<script src="lib/code/exporting.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
