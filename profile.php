@@ -44,8 +44,8 @@ include "inc/header.php";
 
 
 <div class="containter">
-
-	<div class="col-md-12" style="margin-top: 75px;">
+	<div class="panel-body">
+	<div class="col-md-12" style="margin-top: 35px;">
 
 	  <div class="panel panel-info">
 	  <div class="panel-heading" align="center">
@@ -174,9 +174,13 @@ include "inc/header.php";
 		?>
 	  </div>
 
+	</div>
+	</div>
+	  </div>
+	  </div>
+</div>
+</div>	  
 
-	  </div>
-	  </div>
 <?php
 include "inc/footer.php";
 ?>
