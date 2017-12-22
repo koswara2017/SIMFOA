@@ -31,7 +31,7 @@
 	if($errflag) {
 		$_SESSION['ERRMSG_ARR_ADMIN'] = $ERRMSG_ARR_ADMIN;
 		session_write_close();
-		header("location: ../index.php");
+		header("location: ../../admin_login.php");
 		exit();
 	}
  
@@ -61,7 +61,7 @@
 			if($errflag) {
 				$_SESSION['ERRMSG_ARR_ADMIN'] = $ERRMSG_ARR_ADMIN;
 				session_write_close();
-				header("location: ../index.php");
+				header("location: ../../admin_login.php");
 				exit();
 			}
 		}
