@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="admin/css/general.css"> 
 		<script type="text/javascript" src="admin/assets/js/vendor/jquery.min.js"></script>
 		<link rel="stylesheet" href="admin/assets/css/vendor/bootstrap/css/bootstrap.min.css">
+		<link href="admin/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="admin/assets/css/flat-ui.min.css">
 		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
